@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/delete.css' %}">
+    <title>Excluir Tarefa</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#">TWTodos</a>
+        </div>
+    </nav>
+
+    <div>
+        <h1>Excluir Tarefas</h1>   
+    </div>
+
+    <p>Tem certeza que deseja excluir a tarefa <strong>{{ todo.titulo }}</strong>?</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit" class="excluido">Excluir</button>
+    <a href="{% url "todo_list" %}" class="cancelado">Cancelar</a>
+</form>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2024 TWTodos. Criado por Alisson Soares Guimarães.</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/alisson-guimar%C3%A3es-297b091a2/" target="_blank">Linkedin</a>
+            <a href="https://github.com/AlissonGuimaraes98" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

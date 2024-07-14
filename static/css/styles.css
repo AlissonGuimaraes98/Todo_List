@@ -1,0 +1,169 @@
+html, body {
+    height: 100%;
+    margin: 5;
+    padding: 5;
+}
+
+/* Estilos para a navegação */
+nav {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+/* Estilos para o título */
+h1 {
+    color: black;
+    margin-left: 150px; /* Ajuste único para o título */
+}
+
+/* Estilos para a tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.table th, .table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td {
+    text-align: center;
+}
+
+a.edicao {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+a.edicao:hover {
+    background-color: darkblue;
+}
+
+a.feito {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+a.feito:hover {
+    background-color: darkgreen;
+}
+
+a.apagar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a.apagar:hover {
+    background-color: darkred;
+}
+
+p {
+    margin-left: 150px;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #007bff;
+}
+

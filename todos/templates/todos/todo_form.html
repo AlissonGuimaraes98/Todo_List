@@ -1,0 +1,57 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+    
+    {% if todo.pk %}
+        <title>TWTodos - Editar Tarefas</title>
+    {% else %}
+        <title>TWTodos - Novas Tarefas</title>
+    {% endif %}
+    
+</head>
+<body>
+
+    <nav>
+        <div>
+            <a href="{% url "todo_list" %}">TWTodos</a>
+        </div>
+    </nav>
+
+    {% if todo.pk %}
+    <div>
+        <h1>Editar Tarefa</h1>
+    </div>
+    {% else %}
+    <div>
+        <h1>Novas Tarefas</h1>
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 TWTodos. Criado por Alisson Soares Guimarães.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/alisson-guimar%C3%A3es-297b091a2/" target="_blank">Linkedin</a>
+                <a href="https://github.com/AlissonGuimaraes98" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

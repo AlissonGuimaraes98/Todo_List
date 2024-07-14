@@ -1,0 +1,109 @@
+html, body {
+    height: 100%;
+    margin: 5;
+    padding: 5;
+}
+
+/* Estilos para a navegação */
+nav {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+/* Estilos para o título */
+h1 {
+    color: black;
+    margin-left: 150px; /* Ajuste único para o título */
+}
+
+p {
+    margin-left: 150px;
+}
+
+form {
+    margin-left: 150px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Estilização do botão Excluir */
+button.excluido {
+    background-color: #ff5f5f; /* Vermelho */
+    color: #fff; /* Letras brancas */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.excluido:hover {
+    background-color: #e53e3e; /* Vermelho mais escuro ao passar o mouse */
+}
+
+/* Estilização do link Cancelar */
+a.cancelado {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Letras brancas */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a.cancelado:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #007bff;
+}

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>TWTodos - Lista de Tarefas</title>
+    
+</head>
+<body>
+
+    <nav>
+        <div>
+            <a href="#">TWTodos</a>
+        </div>
+    </nav>
+
+    <div>
+        <h1>Lista de Tarefas</h1>   
+    </div>
+
+    {% if todo_list %}
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Criado em</th>
+                        <th scope="col">Data de entrega</th>
+                        <th scope="col">Finalizado em</th>
+                        <th scope="col"> Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for todo in todo_list %}
+                        <tr>
+                            <th scope="row">{{ todo.pk }}</th>
+                            <td>{{ todo.titulo }}</td>
+                            <td>{{ todo.data_criacao| date:"d/m/Y H:i" }}</td>
+                            <td>{{ todo.data_prazo| date:"d/m/Y" }}</td>
+                            <td>{{ todo.data_entrega| default:"-"| date:"d/m/Y" }}</td>
+
+                            <td>
+                                {% if todo.data_entrega %}
+                                
+                                <a href="{% url "todo_complete" pk=todo.pk %}" class="feito">Concluir</a>
+
+                                {% endif %}
+
+                                <a href="{% url "todo_update" pk=todo.pk %}" class="edicao">Editar</a>
+                                <a href="{% url "todo_delete" pk=todo.pk %}" class="apagar">Excluir</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>Não há tarefas cadastradas</p>
+    {% endif %}
+
+    <a href="{% url 'todo_create' %}" class="btn">Nova tarefa</a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 TWTodos. Criado por Alisson Soares Guimarães.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/alisson-guimar%C3%A3es-297b091a2/" target="_blank">Linkedin</a>
+                <a href="https://github.com/AlissonGuimaraes98" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body> 
+</html>
